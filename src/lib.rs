@@ -147,13 +147,18 @@ pub fn program_turn_gen(difficulty: DifficultyLevel, max_per_turn: u32) -> u32 {
             count
         }
         DifficultyLevel::Hard => {
-            let mut count = get_random_u32() % max_per_turn;
-            if count / 2 < max_per_turn {
-                // 远离max_per_turn范围的数字重新来随机一次, 让程序更容易win
-                count = get_random_u32() % max_per_turn;
+            // Implement a winning strategy for hard mode
+            let game = unsafe { PEBBLE_GAME.get_or_insert(Default::default()) };
+            let remaining = game.pebbles_remaining;
+            let target = (remaining - 1) % (max_per_turn + 1);
+            
+            if target == 0 {
+                // If we can't force a winning position, take a random number of pebbles
+                get_random_u32() % max_per_turn + 1
+            } else {
+                // Take pebbles to leave a multiple of (max_per_turn + 1) remaining
+                target
             }
-            count += 1;
-            count
         }
     }
 }
