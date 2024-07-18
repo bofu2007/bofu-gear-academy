@@ -11,4 +11,4 @@ bofu-gear-academy
 ### Deploy Address
 
 
-[`0x7be573363ae986d7ac4a93284a5cc05e3f3756d37fbe4e3da6da2f20c3864fd3`](https://idea.gear-tech.io/programs/0x7be573363ae986d7ac4a93284a5cc05e3f3756d37fbe4e3da6da2f20c3864fd3?node=wss%3A%2F%2Ftestnet.vara.network)
+[`0x7e0ba693ae447fc659264593a51f9a4d12ecf786d64bda069d3f665604f2aaf4`](https://idea.gear-tech.io/programs/0x7e0ba693ae447fc659264593a51f9a4d12ecf786d64bda069d3f665604f2aaf4?node=wss%3A%2F%2Ftestnet.vara.network)
